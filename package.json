@@ -1,0 +1,30 @@
+{
+  "name": "emotional-climate-sensing-service",
+  "version": "1.0.0",
+  "description": "Service that senses the emotional climate of a community from text signals",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "build": "pnpm --recursive --filter \"./apps/*\" build",
+    "test": "pnpm --recursive test",
+    "lint": "pnpm --recursive lint",
+    "db:migrate": "pnpm --filter \"@emotional-climate/api\" db:migrate",
+    "db:seed": "pnpm --filter \"@emotional-climate/api\" db:seed",
+    "db:studio": "pnpm --filter \"@emotional-climate/api\" db:studio",
+    "clean": "pnpm --recursive clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "emotional-analysis",
+    "sentiment-analysis",
+    "community-health",
+    "climate-sensing"
+  ]
+}
